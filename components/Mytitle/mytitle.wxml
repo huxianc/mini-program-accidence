@@ -1,0 +1,14 @@
+<view class="my_title">
+    <view class="logo">
+        <image class="logo_img" style="width:140rpx;height:60rpx;" src="../../image/logo.jpg" mode="widthFix"></image>
+    </view>
+    <view class="search_icon">
+        <image style="width:48rpx;height:48rpx;"  src="../../image/search.png" ></image>
+    </view>
+    <view class="user_icon">
+        <image style="width:54rpx;height:60rpx;"  src="https://static.hdslb.com/images/akari.jpg"></image>
+    </view>
+    <view class="down_icon">
+        下载
+    </view>
+</view>

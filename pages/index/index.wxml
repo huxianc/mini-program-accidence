@@ -1,0 +1,48 @@
+<view class="main">
+  <Mytitle></Mytitle>
+
+  <view class="nav_wrap">
+    <scroll-view class="nav" scroll-x>
+      <view bindtap="activeNav" 
+      data-index="{{index}}" 
+      class="nav_item {{index===currentIndexNav?'active':''}}" 
+      wx:for="{{navList}}" wx:key="{{index}}">
+        {{item.text}}
+      </view> 
+    </scroll-view>
+  </view>
+
+  <view class="slides">
+    <swiper autoplay indicator-dots circular>
+      <swiper-item wx:for="{{swiperList}}" wx:key="{{index}}">
+        <navigator>
+          <image src="{{item.imgSrc}}" mode="widthFix"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="video_wrap">
+    <navigator url="../detail/detail?id={{item.id}}" class="video_item" wx:for="{{videosList}}" wx:key="{{index}}">
+      <view class="video_img">
+        <image  src="{{item.imgSrc}}" mode="widthFix"></image>
+        <view class="video_info">
+        <view class="play_count_wrap">
+          <view class="play_count">
+            <text class="play_count" >
+              播放量：{{item.playCount}}
+            </text>
+          </view>
+        </view>
+        <view class="comment_count_row">
+            <text class="comment_count" >
+              评论量：{{item.commentCount}}
+            </text>
+          </view>
+      </view>
+      </view>
+      
+      <view class="video_title">{{item.desc}}</view>
+    </navigator>
+  </view>
+</view>
